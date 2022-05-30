@@ -1,3 +1,5 @@
+#считаем сумму двх чисел, передаем значение суммы в строку, вводим значение суммы-строки в поле
+#ансвер и нажимает сабмит
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
