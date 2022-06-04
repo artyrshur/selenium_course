@@ -43,7 +43,7 @@ finally:
     alert_text = alert.text
     addToClipBoard = alert_text.split(': ')[-1]#копирует текст алерта в буфер потом просто вставить и все
     pyperclip.copy(addToClipBoard)
-    print(alert_text)#выводит в консоль пайчарма
+    print(alert_text)#выводит в консоль пайчарма ответ алерта
     alert = browser.switch_to.alert
     alert.accept()#нажми ок в алерте
     browser.quit()
