@@ -3,6 +3,7 @@
 import math
 import time
 
+import pyperclip
 from selenium import webdriver
 
 
@@ -38,6 +39,11 @@ try:
     button1.click()
 
 finally:
-    time.sleep(1)
-    print(browser.switch_to.alert.text)
+    alert = browser.switch_to.alert
+    alert_text = alert.text
+    addToClipBoard = alert_text.split(': ')[-1]#копирует текст алерта в буфер потом просто вставить и все
+    pyperclip.copy(addToClipBoard)
+    print(alert_text)#выводит в консоль пайчарма
+    alert = browser.switch_to.alert
+    alert.accept()#нажми ок в алерте
     browser.quit()
