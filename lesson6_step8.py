@@ -1,9 +1,12 @@
+#выполни подсчет выражения вставь в строку инпут и отметь чекбокс и радиобатон и нажми сабмит
 from selenium import webdriver
 import math
 import time
 
+
 def calc(x):
-  return str(math.log(abs(12*math.sin(int(x)))))
+    return str(math.log(abs(12 * math.sin(int(x)))))
+
 
 try:
     link = "http://suninjuly.github.io/math.html"
@@ -32,5 +35,3 @@ try:
 finally:
     time.sleep(10)
     browser.quit()
-
-
