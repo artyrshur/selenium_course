@@ -33,5 +33,6 @@ try:
     button.click()
 
 finally:
-    time.sleep(10)
+    print(browser.switch_to.alert.text) #выводит текст алерта в консоль и оттуда можно скопировать
     browser.quit()
+
