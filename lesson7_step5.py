@@ -1,3 +1,4 @@
+#создаем вторую вкладку в браузере и переключаемся на нее, перед этим говорим браузеру - запомни первую вкладку
 import math
 import time
 
@@ -30,6 +31,10 @@ try:
     button1.click()
 
 finally:
+    alert = browser.switch_to.alert
+    alert_text = alert.text
+    addToClipBoard = alert_text.split(': ')[-1]  # копирует текст алерта в буфер потом просто вставить и все
+    pyperclip.copy(addToClipBoard)
     time.sleep(0)
     print(browser.switch_to.alert.text)
     confirm = browser.switch_to.alert #нажимает ок в алерте - в всплывающем окне подтверждения

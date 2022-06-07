@@ -19,8 +19,8 @@ try:
 
     button = browser.find_element_by_xpath("/html/body/form/div/div/button")
     button.click()
-    alert = browser.switch_to.alert  #нажимает на кнопку всплывающего окна ок
-    alert.accept()
+    alert = browser.switch_to.alert  #переключение на окно алерта. браузер обрати внимание на алерт
+    alert.accept()#нажми на ок.согласие
     time.sleep(1)
 
     x_element = browser.find_element_by_id('input_value')
@@ -33,7 +33,7 @@ try:
     input = browser.find_element_by_id("answer")
     time.sleep(0.1)
     input.send_keys(y)
-    #time.sleep(1)
+
 
     button1 = browser.find_element_by_css_selector("button.btn")
     button1.click()

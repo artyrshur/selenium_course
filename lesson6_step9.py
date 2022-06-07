@@ -13,6 +13,7 @@ try:
     x_element = browser.find_element_by_id('treasure')
     x = x_element.get_attribute("valuex")
     y = calc(int(x))
+    print(x)
 
 
     input = browser.find_element_by_id('answer')

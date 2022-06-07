@@ -29,7 +29,7 @@ input.send_keys(y)
 btn = browser.find_element_by_id("solve")
 time.sleep(1)
 btn.click()
-alert = browser.switch_to.alert
+alert = browser.switch_to.alert#переключись на окно алерта
 alert_text = alert.text
 print(alert_text)#принтует текст алерта в консоль иде
 browser.quit()
