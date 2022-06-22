@@ -3,16 +3,16 @@ import time
 import os
 
 try:
-    link = "http://suninjuly.github.io/file_input.html"
+    link = "https://www.etagi.com/"
     browser = webdriver.Chrome()
     browser.get(link)
 
-    input = browser.find_element_by_xpath('/html/body/div/form/div/input[1]')
-    input.send_keys('Artyr')
-    input1 = browser.find_element_by_xpath('/html/body/div/form/div/input[2]')
-    input1.send_keys('Shur')
-    input2 = browser.find_element_by_xpath('/html/body/div/form/div/input[3]')
-    input2.send_keys('arty@gmail.com')
+    input = browser.find_element_by_xpath('//*[@id="wARPj2Cdgv"]/div[2]/div/div[1]/div[1]/div/button[2]').click()
+    #input.send_keys('Artyr')
+    input1 = browser.find_element_by_xpath('//*[@id="wARPj2Cdgv"]/div[2]/div/div[1]/div[2]/div/div[2]/div[1]/div/input')
+    input1.send_keys('1000000')
+    input2 = browser.find_element_by_xpath('//*[@id="wARPj2Cdgv"]/div[2]/div/div[1]/div[2]/div/div[2]/div[2]/div/input')
+    input2.send_keys('3000000')
     current_dir = os.path.abspath(os.path.dirname(__file__))
     file_name = 'file.txt'
     file_path = os.path.join(current_dir, file_name)
